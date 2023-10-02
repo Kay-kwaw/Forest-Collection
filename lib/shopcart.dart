@@ -71,7 +71,9 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                   alignment: AlignmentDirectional(-0.35, -0.86),
                   child: Text(
                     '133 sounds',
-                    style: TextStyle(),
+                    style: TextStyle(
+                      color: Colors.brown
+                    ),
                   ),
                 ),
                 Align(
@@ -80,6 +82,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                     icon: const Icon(Icons.api_sharp),
                     color: const Color(0xFFC9C9C9),
                     onPressed: () {},
+                    iconSize: 40,
                   ),
                 ),
                 Align(
@@ -149,29 +152,30 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.02, -0.59),
+                  alignment: const AlignmentDirectional(0.02, -0.68),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
                     child: Image.network(
                       'https://picsum.photos/seed/781/600',
-                      width: 196,
-                      height: 159,
+                      width: 250,
+                      height: 190,
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
                 const Align(
-                  alignment: AlignmentDirectional(-0.22, -0.35),
+                  alignment: AlignmentDirectional(-0.22, -0.43),
                   child: Text(
                     'Natural Sounds',
                     style: TextStyle(
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
+                          fontWeight: FontWeight.bold
                         ),
                   ),
                 ),
                 const Align(
-                  alignment: AlignmentDirectional(-0.35, -0.31),
+                  alignment: AlignmentDirectional(-0.35, -0.38),
                   child: Text(
                     '26 aounds',
                     style: TextStyle(
@@ -365,7 +369,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(-0.94, 0.75),
+                  alignment: const AlignmentDirectional(-0.94, 0.75),
                   child: Container(
                     width: 40,
                     height: 42,
@@ -378,7 +382,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                         Align(
                           alignment: const AlignmentDirectional(0.00, 0.00),
                           child: IconButton(
-                            icon: Icon(Icons.deblur),
+                            icon: const Icon(Icons.deblur),
                             color: Colors.white,
                              onPressed: () {  },
                            
@@ -389,25 +393,25 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.01, 0.02),
+                  alignment: const AlignmentDirectional(0.01, 0.05),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: Image.network(
-                      'https://picsum.photos/seed/781/600',
-                      width: 196,
-                      height: 159,
+                    child: Image.asset(
+                      "Assets/na.png",
+                      width: 250,
+                      height: 190,
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(-0.02, 0.65),
+                  alignment: const AlignmentDirectional(-0.02, 0.78),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: Image.network(
-                      'https://picsum.photos/seed/781/600',
-                      width: 196,
-                      height: 159,
+                    child: Image.asset(
+                      "Assets/Screenshot 2023-10-02 at 4.08.01 PM.png",
+                      width: 250,
+                      height: 190,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -430,17 +434,25 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                     style: TextStyle(
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
+                          fontWeight: FontWeight.bold
                         ),
                   ),
                 ),
-                const Align(
-                  alignment: AlignmentDirectional(-0.29, 0.65),
-                  child: Text(
-                    'Sound of rain',
-                    style: TextStyle(
-                          fontFamily: 'Readex Pro',
-                          color: Colors.white,
-                        ),
+                 Align(
+                  alignment: const AlignmentDirectional(-0.29, 0.75),
+                  child: GestureDetector(
+                    onTap: (){
+                      
+                    },
+                    child: const Text(
+                      'Sound of rain',
+                      style: TextStyle(
+                            fontFamily: 'Readex Pro',
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                    ),
                   ),
                 ),
               ],

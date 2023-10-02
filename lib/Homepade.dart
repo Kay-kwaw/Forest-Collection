@@ -1,5 +1,6 @@
 // ignore: file_names
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:forest_collection/shopcart.dart';
 import 'package:page_transition/page_transition.dart';
@@ -91,16 +92,20 @@ class _HomePageWidgetState extends State<HomePageWidget> with SingleTickerProvid
                     style: TextStyle(),
                   ),
                 ),
-                const Align(
+                  Align(
                   alignment: AlignmentDirectional(-0.53, -0.73),
-                  child: Text(
-                    'Forest Collection',
-                    style: TextStyle(
-                          fontFamily: 'Readex Pro',
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.w300,
-                        ),
+                  child: AnimatedTextKit(
+                   animatedTexts: [
+                      TypewriterAnimatedText(
+                      'Forest Collection',
+                      textStyle: const TextStyle(
+                            fontFamily: 'Readex Pro',
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w300,
+                          ),
+                    ),
+                   ],
                   ),
                 ),
                 const Align(
@@ -222,7 +227,7 @@ class _HomePageWidgetState extends State<HomePageWidget> with SingleTickerProvid
                         const Align(
                           alignment: AlignmentDirectional(-0.71, -0.76),
                           child: Text(
-                            'Being in the \nforest',
+                            'Being in the \nRain',
                             style:
                                 TextStyle(
                                       fontFamily: 'Readex Pro',
@@ -262,12 +267,15 @@ class _HomePageWidgetState extends State<HomePageWidget> with SingleTickerProvid
                             ),
                           ),
                         ),
-                        const Align(
-                          alignment: AlignmentDirectional(0.86, -0.85),
-                          child: Icon(
-                            Icons.collections_bookmark,
-                            color: Colors.white,
-                            size: 24,
+                         Align(
+                          alignment: const AlignmentDirectional(0.92, -1.10),
+                          child: IconButton(
+                            icon: const Icon(Icons.favorite_border),
+                            color: _colorAnimation!.value,
+                            onPressed: () {
+isFav ? _controller!.reverse() : _controller!.forward();
+                            },
+                            iconSize: 30,
                           ),
                         ),
                       ],
